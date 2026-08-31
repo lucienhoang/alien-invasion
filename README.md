@@ -63,9 +63,8 @@ While following _Python Crash Course_, I extended the original project with a fe
 
 ## 🧠 What I Learned
 
-- Realistic development process: write the simplest possible code first, then refactor as the project grows more complex — it doesn't need to be perfect from the start. (Example: ship movement went from left/right only to 4 directions; a single bloated `game_functions` file was later split, extracting `start_game()` to be shared by both the Play button and the P key.)
+- Realistic development process: write the simplest possible code first, then refactor as the project grows more complex — it doesn't need to be perfect from the start.
 - Quick way to understand a class: look at `__init__()` to see what input it needs (constructor parameters) and what attributes it creates — the fastest way to grasp what a class does without reading all the code.
-- Any place that manually sets `rect` (e.g. `center_ship()`) must also re-sync `self.x`/`self.y` — otherwise, on the next frame the accumulation code (`self.rect.x = self.x`) will overwrite the change just made.
 - Game speed must be independent of machine speed: always use `clock.tick(FPS)` in the main loop. Without it, every object's movement speed depends on how busy the CPU is at that moment, causing the game to feel inconsistently fast or slow.
 
 ## 🛠 Built With
